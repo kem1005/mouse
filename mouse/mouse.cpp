@@ -50,6 +50,7 @@ void mouse::mouseReleaseEvent (QMouseEvent* event)
 }
 void mouse::mouseDoubleClickEvent (QMouseEvent * event)
 {
-
+    QString str = "(" + QString::number (event->x()) + ", " +QString::number (event->y()) +")";
+    statusBar ()->showMessage (QStringLiteral("雙擊:")+str,1000);
 }
 
